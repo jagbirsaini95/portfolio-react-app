@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container, Grid2 } from "@mui/material"
 import Aboutme from "./components/Aboutme"
@@ -7,7 +6,7 @@ import Portfolio from "./pages/Portfolio"
 import NotFoundPage from "./pages/NotFoundPage";
 import Footer from "./components/Footer";
 
-const AppRouter: React.FC = () => {
+const AppRouter = () => {
     return (
         <Router>
             <Container>
