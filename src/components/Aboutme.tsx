@@ -1,7 +1,10 @@
+import Timeline from "./Timeline"
 
 const Aboutme = () => {
     return (
-        <div>Aboutme</div>
+        <>
+            <Timeline />
+        </>
     )
 }
 
