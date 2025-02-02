@@ -32,7 +32,7 @@ const Sidebar = () => {
             <Drawer anchor="left" open={open} onClose={toggleDrawer}>
                 <List sx={{ width: 250 }}>
                     <ListItem>
-                        <ListItemText primary="My Portfolio" sx={{ fontWeight: "bold", textAlign: "center" }} />
+                        <ListItemText primary="Jagbir's Portfolio" sx={{ fontWeight: "bold", textAlign: "center" }} />
                     </ListItem>
                     <Divider />
                     {menuItems.map((item, index) => (

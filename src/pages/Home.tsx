@@ -1,13 +1,13 @@
 import { Container, Typography, Button, Box, Grid, Paper, Avatar } from "@mui/material";
 import { GitHub, LinkedIn, Description } from "@mui/icons-material";
 import resume from '../assets/Jagbir_Singh_SDE_Resume.pdf'
-
-const skills = ["React", "Redux", "Angular", "Express.js", "Socket.IO", "MongoDB", "Git", "Postman"];
+import { AnimatedCard } from "../components/AminatedCard";
+import { myInfo, skills } from "../assets/constants";
 
 const Home = () => {
     return (
         <Container maxWidth="md" sx={{ mt: 4 }}>
-            <Paper elevation={3} sx={{ p: 4, borderRadius: 3, textAlign: "center" }}>
+            <AnimatedCard customStyle={{ padding: "20px", textAlign: 'center' }}>
                 {/* Profile Section */}
                 <Avatar
                     sx={{
@@ -22,13 +22,13 @@ const Home = () => {
                 </Avatar>
 
                 <Typography variant="h4" fontWeight="bold" sx={{ mt: 2 }}>
-                    Jagbir Singh
+                    {myInfo.name}
                 </Typography>
                 <Typography variant="h6" color="textSecondary">
-                    Software Developer | React | Angular | Node.js
+                    {myInfo.designation}
                 </Typography>
                 <Typography variant="body1" color="textSecondary" sx={{ mt: 2 }}>
-                    Passionate Software Developer with 3 years of experience in developing scalable web applications using modern technologies like React, Redux, Angular, Node.js, and MongoDB.
+                    {myInfo.description}
                 </Typography>
 
                 {/* Skills Section */}
@@ -37,7 +37,7 @@ const Home = () => {
                         Key Skills
                     </Typography>
                     <Grid container spacing={2} justifyContent="center" sx={{ mt: 2 }}>
-                        {skills.map((skill, index) => (
+                        {skills.Frontend.map((skillchip, index) => (
                             <Grid item key={index}>
                                 <Paper
                                     elevation={2}
@@ -49,7 +49,7 @@ const Home = () => {
                                         fontWeight: "bold",
                                     }}
                                 >
-                                    {skill}
+                                    {skillchip}
                                 </Paper>
                             </Grid>
                         ))}
@@ -72,7 +72,7 @@ const Home = () => {
                         variant="contained"
                         color="secondary"
                         startIcon={<GitHub />}
-                        href="https://github.com/jagbirsaini95"
+                        href={myInfo.gitHubURL}
                         target="_blank"
                         sx={{ mx: 1 }}
                     >
@@ -82,14 +82,14 @@ const Home = () => {
                         variant="contained"
                         color="success"
                         startIcon={<LinkedIn />}
-                        href="https://www.linkedin.com/in/jagbirsaini95"
+                        href={myInfo.linkedInURL}
                         target="_blank"
                         sx={{ mx: 1 }}
                     >
                         LinkedIn
                     </Button>
                 </Box>
-            </Paper>
+            </AnimatedCard>
         </Container>
     );
 };

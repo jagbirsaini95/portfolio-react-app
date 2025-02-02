@@ -1,4 +1,5 @@
 import { Box, Typography, Link } from '@mui/material';
+import { myInfo } from '../assets/constants';
 
 const Footer = () => {
     return (
@@ -11,13 +12,13 @@ const Footer = () => {
             }}
         >
             <Typography variant="body2" gutterBottom>
-                &copy; {new Date().getFullYear()} Jagbir Singh Portfolio. All Rights Reserved.
+                &copy; {new Date().getFullYear()} {myInfo.name} Portfolio. All Rights Reserved.
             </Typography>
             <Typography variant="body2">
-                <Link href="https://github.com/jagbirsaini95" color="inherit" target="_blank" rel="noopener noreferrer">
+                <Link href={myInfo.gitHubURL} color="inherit" target="_blank" rel="noopener noreferrer">
                     GitHub
                 </Link>{' | '}
-                <Link href="https://www.linkedin.com/in/jagbirsaini95" color="inherit" target="_blank" rel="noopener noreferrer">
+                <Link href={myInfo.linkedInURL} color="inherit" target="_blank" rel="noopener noreferrer">
                     LinkedIn
                 </Link>
             </Typography>

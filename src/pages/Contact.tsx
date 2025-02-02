@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, TextField, Button, Typography, Paper, Box } from "@mui/material";
 import { Send } from "@mui/icons-material";
+import { myInfo } from "../assets/constants";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -15,7 +16,7 @@ const Contact = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const mailtoLink = `mailto:jagbirsaini95@gmail.com?subject=Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`;
+        const mailtoLink = `mailto:${myInfo.email}?subject=Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`;
         window.location.href = mailtoLink;
     };
 
