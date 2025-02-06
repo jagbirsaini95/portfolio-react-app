@@ -5,7 +5,7 @@ import { experienceTimeline } from "../assets/constants";
 
 const JSTimeline = () => {
     return (
-        <Timeline position="alternate" sx={{ mt: 2 }}>
+        <Timeline sx={{ mt: 2 }}>
             {experienceTimeline.map((item, index) => (
                 <TimelineItem key={index}>
                     <TimelineSeparator>
