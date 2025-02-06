@@ -1,5 +1,6 @@
-import { Box, Typography, Link } from '@mui/material';
+import { Box, Typography, Link, Grid } from '@mui/material';
 import { myInfo } from '../assets/constants';
+import { GitHub, LinkedIn } from '@mui/icons-material';
 
 const Footer = () => {
     return (
@@ -14,14 +15,25 @@ const Footer = () => {
             <Typography variant="body2" gutterBottom>
                 &copy; {new Date().getFullYear()} {myInfo.name} Portfolio. All Rights Reserved.
             </Typography>
-            <Typography variant="body2">
-                <Link href={myInfo.gitHubURL} color="inherit" target="_blank" rel="noopener noreferrer">
-                    GitHub
-                </Link>{' | '}
-                <Link href={myInfo.linkedInURL} color="inherit" target="_blank" rel="noopener noreferrer">
-                    LinkedIn
-                </Link>
-            </Typography>
+            <Grid container spacing={2} justifyContent="center">
+                <Grid item>
+                    <Link href={myInfo.gitHubURL} target="_blank" rel="noopener noreferrer" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                        <GitHub />
+                        GitHub
+                    </Link>
+                </Grid>
+                <Grid item>
+                    <Typography variant="body2" gutterBottom>
+                        |
+                    </Typography>
+                </Grid>
+                <Grid item>
+                    <Link href={myInfo.linkedInURL} target="_blank" rel="noopener noreferrer" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                        <LinkedIn />
+                        LinkedIn
+                    </Link>
+                </Grid>
+            </Grid>
         </Box>
     );
 };

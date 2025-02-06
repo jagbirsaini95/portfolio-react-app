@@ -16,7 +16,7 @@ const JSTimeline = () => {
                         <Typography variant="h6" color="primary">
                             {item.year}
                         </Typography>
-                        <Typography variant="subtitle1" fontWeight="bold">
+                        <Typography variant="subtitle2" fontWeight="bold" >
                             {item.title}
                         </Typography>
                         <Typography variant="body2" color="textSecondary">
