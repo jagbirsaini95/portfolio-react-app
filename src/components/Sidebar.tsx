@@ -26,7 +26,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <IconButton onClick={toggleDrawer} sx={{ position: "fixed", top: 10, left: 10 }}>
+            <IconButton onClick={toggleDrawer} sx={{ position: "fixed", top: 10, left: 10, zIndex: 1 }}>
                 <Menu />
             </IconButton>
 
