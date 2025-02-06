@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton, Divider, ListItemButton } from "@mui/material";
 import { Home, Info, Work, ContactMail, Menu } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
+import { myInfo } from "../assets/constants";
 
 const Sidebar = () => {
     const [open, setOpen] = useState(false);
@@ -32,7 +33,7 @@ const Sidebar = () => {
             <Drawer anchor="left" open={open} onClose={toggleDrawer}>
                 <List sx={{ width: 250 }}>
                     <ListItem>
-                        <ListItemText primary="Jagbir's Portfolio" sx={{ fontWeight: "bold", textAlign: "center" }} />
+                        <ListItemText primary={myInfo.name.trim().split(' ')[0].concat("'s Portfolio")} sx={{ fontWeight: "bold", textAlign: "center" }} />
                     </ListItem>
                     <Divider />
                     {menuItems.map((item, index) => (

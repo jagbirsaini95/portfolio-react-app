@@ -12,7 +12,7 @@ const AppRouter = () => {
         <Router>
             <Container>
                 <Sidebar />
-                <div style={{ padding: '20px', marginLeft: '60px' }}>
+                <div style={{ padding: '2%' }}>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<Aboutme />} />

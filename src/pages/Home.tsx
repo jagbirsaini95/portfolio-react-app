@@ -18,7 +18,7 @@ const Home = () => {
                         fontSize: "2rem",
                     }}
                 >
-                    JS
+                    {myInfo.name.trim().split(' ').map(word => word.charAt(0))}
                 </Avatar>
 
                 <Typography variant="h4" fontWeight="bold" sx={{ mt: 2 }}>
@@ -64,7 +64,7 @@ const Home = () => {
                         startIcon={<Description />}
                         href={resume}
                         target="_blank"
-                        sx={{ mx: 1 }}
+                        sx={{ m: 1 }}
                     >
                         View Resume
                     </Button>
@@ -74,7 +74,7 @@ const Home = () => {
                         startIcon={<GitHub />}
                         href={myInfo.gitHubURL}
                         target="_blank"
-                        sx={{ mx: 1 }}
+                        sx={{ m: 1 }}
                     >
                         GitHub
                     </Button>
@@ -84,7 +84,7 @@ const Home = () => {
                         startIcon={<LinkedIn />}
                         href={myInfo.linkedInURL}
                         target="_blank"
-                        sx={{ mx: 1 }}
+                        sx={{ m: 1 }}
                     >
                         LinkedIn
                     </Button>
