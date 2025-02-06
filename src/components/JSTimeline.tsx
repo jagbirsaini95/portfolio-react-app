@@ -1,11 +1,11 @@
 import { Typography, } from "@mui/material";
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from "@mui/lab";
+import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot,timelineItemClasses } from "@mui/lab";
 import { Work, School } from "@mui/icons-material";
 import { experienceTimeline } from "../assets/constants";
 
 const JSTimeline = () => {
     return (
-        <Timeline sx={{ mt: 2 }}>
+        <Timeline sx={{ mt: 2, [`& .${timelineItemClasses.root}:before`]:{ flex:0,padding:0,}, }}>
             {experienceTimeline.map((item, index) => (
                 <TimelineItem key={index}>
                     <TimelineSeparator>
