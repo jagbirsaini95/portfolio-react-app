@@ -3,7 +3,7 @@ import { Card, styled } from "@mui/material";
 // Styled Card with CSS animations
 export const AnimatedCard = styled(Card)<{ customStyle?: object }>(({ customStyle }) => ({
     ...customStyle,
-    margin: "30px 0px",
+    margin: "20px",
     borderRadius: 12,
     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
     transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",

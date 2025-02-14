@@ -30,7 +30,8 @@ const Home = () => {
                 <Typography variant="body1" color="textSecondary" sx={{ mt: 2 }}>
                     {myInfo.description}
                 </Typography>
-
+            </AnimatedCard>
+            <AnimatedCard customStyle={{ padding: "20px", textAlign: 'center' }}>
                 {/* Skills Section */}
                 <Box sx={{ mt: 4 }}>
                     <Typography variant="h5" fontWeight="bold">
@@ -55,9 +56,10 @@ const Home = () => {
                         ))}
                     </Grid>
                 </Box>
-
+            </AnimatedCard>
+            <AnimatedCard customStyle={{ padding: "0px", textAlign: 'center' }}>
                 {/* Buttons */}
-                <Box sx={{ mt: 4 }}>
+                <Box sx={{ m: 4 }}>
                     <Button
                         variant="contained"
                         color="primary"

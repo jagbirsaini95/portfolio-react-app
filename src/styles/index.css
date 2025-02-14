@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.MuiDrawer-paper {
+    background-color: "#282c34"
+}
