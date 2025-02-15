@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Container, TextField, Button, Typography, Paper, Box } from "@mui/material";
+import { Container, TextField, Button, Typography, Box } from "@mui/material";
 import { Send } from "@mui/icons-material";
 import { myInfo } from "../assets/constants";
+import { AnimatedCard } from "../components/AminatedCard";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ const Contact = () => {
 
     return (
         <Container maxWidth="sm" sx={{ mt: 4 }}>
-            <Paper elevation={3} sx={{ p: 4, borderRadius: 3 }}>
+            <AnimatedCard customstyle={{ padding: "20px" }}>
                 <Typography variant="h4" align="center" gutterBottom>
                     Contact Me
                 </Typography>
@@ -76,7 +77,7 @@ const Contact = () => {
                         Send Email
                     </Button>
                 </Box>
-            </Paper>
+            </AnimatedCard>
         </Container>
     );
 };

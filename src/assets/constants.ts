@@ -1,5 +1,5 @@
 export const myInfo = {
-    name: 'Jagbir Sngh',
+    name: 'Jagbir Singh',
     designation: 'Software Engineer',
     description: 'A passionate Software Developer with 3 years of experience in developing scalable web applications using modern technologies like React, Redux, Angular, Node.js, and MongoDB.',
     email: 'jagbirsaini95@gmail.com',
@@ -10,7 +10,7 @@ export const myInfo = {
 export const experienceTimeline = [
     {
         year: "March 2023 – Present",
-        title: "Software Developer at Bebo Technologies Ltd.",
+        title: "Software Engineer at Bebo Technologies Ltd.",
         description: "Developing user-friendly web applications using React, Angular, and Redux.",
         icon: 'work',
     },
@@ -67,11 +67,11 @@ export const projects = [
     },
 ];
 
-export const skills = {
+export const skills: Record<string, string[]> = {
     Frontend: ["HTML", "CSS", "JavaScript", "React", "Redux", "Angular", "Bootstrap", "Accessibility"],
     Backend: ["Express.js", "Socket.IO", "Postman"],
     Database: ["MongoDB"],
-    VersionControl: ["Git", "GitHub", "GitLab"],
+    'Version Control': ["Git", "GitHub", "GitLab"],
     OS: ["Windows", "Mac", "WSL"]
 }
 

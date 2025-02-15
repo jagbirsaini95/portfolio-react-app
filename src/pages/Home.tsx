@@ -1,4 +1,4 @@
-import { Container, Typography, Button, Box, Grid, Paper, Avatar } from "@mui/material";
+import { Container, Typography, Button, Grid, Avatar, Chip } from "@mui/material";
 import { GitHub, LinkedIn, Description } from "@mui/icons-material";
 import resume from '../assets/Jagbir_Singh_SDE_Resume.pdf'
 import { AnimatedCard } from "../components/AminatedCard";
@@ -7,7 +7,7 @@ import { myInfo, skills } from "../assets/constants";
 const Home = () => {
     return (
         <Container maxWidth="md" sx={{ mt: 4 }}>
-            <AnimatedCard customStyle={{ padding: "20px", textAlign: 'center' }}>
+            <AnimatedCard customstyle={{ padding: "20px", textAlign: 'center' }}>
                 {/* Profile Section */}
                 <Avatar
                     sx={{
@@ -31,66 +31,52 @@ const Home = () => {
                     {myInfo.description}
                 </Typography>
             </AnimatedCard>
-            <AnimatedCard customStyle={{ padding: "20px", textAlign: 'center' }}>
+            <AnimatedCard customstyle={{ padding: "20px", textAlign: 'center' }}>
                 {/* Skills Section */}
-                <Box sx={{ mt: 4 }}>
-                    <Typography variant="h5" fontWeight="bold">
-                        Key Skills
-                    </Typography>
-                    <Grid container spacing={2} justifyContent="center" sx={{ mt: 2 }}>
-                        {skills.Frontend.map((skillchip, index) => (
-                            <Grid item key={index}>
-                                <Paper
-                                    elevation={2}
-                                    sx={{
-                                        px: 2,
-                                        py: 1,
-                                        borderRadius: "20px",
-                                        backgroundColor: "secondary.light",
-                                        fontWeight: "bold",
-                                    }}
-                                >
-                                    {skillchip}
-                                </Paper>
-                            </Grid>
-                        ))}
-                    </Grid>
-                </Box>
+                <Typography variant="h5" fontWeight="bold">
+                    Key Skills
+                </Typography>
+                <Grid container spacing={2} justifyContent="center" sx={{ mt: 2 }}>
+                    {skills.Frontend.map((skillchip, index) => (
+                        <Grid item key={index}>
+                            <Chip
+                                label={skillchip} color="secondary" />
+                        </Grid>
+                    ))}
+                </Grid>
             </AnimatedCard>
-            <AnimatedCard customStyle={{ padding: "0px", textAlign: 'center' }}>
+            <AnimatedCard customstyle={{ textAlign: 'center' }}>
                 {/* Buttons */}
-                <Box sx={{ m: 4 }}>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        startIcon={<Description />}
-                        href={resume}
-                        target="_blank"
-                        sx={{ m: 1 }}
-                    >
-                        View Resume
-                    </Button>
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        startIcon={<GitHub />}
-                        href={myInfo.gitHubURL}
-                        target="_blank"
-                        sx={{ m: 1 }}
-                    >
-                        GitHub
-                    </Button>
-                    <Button
-                        variant="contained"
-                        color="success"
-                        startIcon={<LinkedIn />}
-                        href={myInfo.linkedInURL}
-                        target="_blank"
-                        sx={{ m: 1 }}
-                    >
-                        LinkedIn
-                    </Button>
-                </Box>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    startIcon={<Description />}
+                    href={resume}
+                    target="_blank"
+                    sx={{ m: 1 }}
+                >
+                    View Resume
+                </Button>
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    startIcon={<GitHub />}
+                    href={myInfo.gitHubURL}
+                    target="_blank"
+                    sx={{ m: 1 }}
+                >
+                    GitHub
+                </Button>
+                <Button
+                    variant="contained"
+                    color="success"
+                    startIcon={<LinkedIn />}
+                    href={myInfo.linkedInURL}
+                    target="_blank"
+                    sx={{ m: 1 }}
+                >
+                    LinkedIn
+                </Button>
             </AnimatedCard>
         </Container>
     );

@@ -1,12 +1,13 @@
 import { Container, Typography } from "@mui/material";
 import JSTimeline from "../components/JSTimeline";
 import { AnimatedCard } from "../components/AminatedCard";
-import { myInfo, skills } from "../assets/constants";
+import { myInfo, } from "../assets/constants";
+import SkillTabs from "../components/SkillTabs";
 
 const Aboutme = () => {
     return (
         <Container maxWidth="md" sx={{ mt: 4 }}>
-            <AnimatedCard customStyle={{ padding: "20px" }}>
+            <AnimatedCard customstyle={{ padding: "20px" }}>
                 <Typography variant="h4" align="center" gutterBottom>
                     About Me
                 </Typography>
@@ -14,17 +15,13 @@ const Aboutme = () => {
                     {myInfo.description}
                 </Typography>
             </AnimatedCard>
-            <AnimatedCard customStyle={{ padding: "20px" }}>
+            <AnimatedCard customstyle={{ padding: "20px" }}>
                 <Typography variant="h5" fontWeight="bold">
                     Skills
                 </Typography>
-                {Object.entries(skills).map(([category, skillList]) => (
-                    <Typography key={category} variant="body2" color="textSecondary">
-                        <strong>{category}:</strong> {skillList.join(", ")}
-                    </Typography>
-                ))}
+                <SkillTabs />
             </AnimatedCard>
-            <AnimatedCard customStyle={{ padding: "20px", 'margin-top': "10% !important" }}>
+            <AnimatedCard customstyle={{ padding: "20px", marginTop: "10% !important" }}>
                 <Typography variant="h5" fontWeight="bold">
                     Experience Timeline
                 </Typography>
