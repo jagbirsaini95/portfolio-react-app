@@ -1,0 +1,8 @@
+.steps-resume-mobile-view {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.steps-resume-mobile-view .MuiStep-horizontal {
+    padding: 5px;
+}

@@ -14,7 +14,7 @@ import {
     Box,
     useMediaQuery,
 } from "@mui/material";
-import { Home, Info, Work, ContactMail, Menu } from "@mui/icons-material";
+import { Home, Info, Work, ContactMail, Menu, Summarize } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import { myInfo } from "../assets/constants";
@@ -36,6 +36,8 @@ const Sidebar = () => {
         { text: "About", icon: <Info />, path: "/about" },
         { text: "Projects", icon: <Work />, path: "/projects" },
         { text: "Contact", icon: <ContactMail />, path: "/contact" },
+        { text: "Resume", icon: <Summarize />, path: "/resume" },
+        // { text: "Create Resume", icon: <RestaurantMenuSharp />, path: "/create-resume" }, TODO
     ];
 
     const handleNavigation = (path: string) => {
