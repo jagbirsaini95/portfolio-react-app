@@ -6,3 +6,14 @@
 .MuiDrawer-paper {
     background-color: "#282c34"
 }
+
+/*dark mode */
+body {
+    background-color: white;
+    color: #282c34;
+}
+
+.dark body {
+    background-color: #282c34;
+    color: white;
+}

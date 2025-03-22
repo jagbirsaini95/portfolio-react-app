@@ -50,23 +50,25 @@ const Sidebar = () => {
             {/* Mobile Sidebar */}
             {isMobile ? (
                 <>
-                    <IconButton onClick={toggleDrawer} sx={{ position: "fixed", top: 10, left: 10, zIndex: 1 }}>
+                    <IconButton onClick={toggleDrawer} color="inherit" sx={{ position: "fixed", top: 10, left: 10, zIndex: 1 }}>
                         <Menu />
                     </IconButton>
 
                     <Drawer anchor="left" open={open} onClose={toggleDrawer} sx={{
                         "& .MuiDrawer-paper": {
-                            backgroundColor: "#282c34",
                         },
                     }}>
-                        <List sx={{ width: 250, color: 'white' }}>
+                        <List sx={{
+                            width: 250,
+                        }}>
                             <ListItem>
                                 <ListItemText primary={myInfo.name.trim().split(' ')[0].concat("'s Portfolio")} sx={{ fontWeight: "bold", textAlign: "center" }} />
                             </ListItem>
                             <Divider />
                             {menuItems.map((item, index) => (
                                 <ListItemButton key={index} onClick={() => handleNavigation(item.path)}>
-                                    <ListItemIcon sx={{ color: 'white' }}>{item.icon}</ListItemIcon>
+                                    <ListItemIcon sx={{
+                                    }}>{item.icon}</ListItemIcon>
                                     <ListItemText primary={item.text} />
                                 </ListItemButton>
                             ))}
@@ -75,7 +77,10 @@ const Sidebar = () => {
                 </>
             ) : (
                 // Navbar for Tabs & Laptops
-                <AppBar position="static" sx={{ backgroundColor: "#282c34", position: 'sticky', top: 0, zIndex: 1 }}>
+                <AppBar position="static" sx={{
+                     backgroundColor: "#282c34",
+                    position: 'sticky', top: 0, zIndex: 1
+                }}>
                     <Toolbar>
                         <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: "bold" }}>
                             {myInfo.name.trim().split(" ")[0].concat("'s Portfolio")}

@@ -7,6 +7,8 @@ import {
     List,
     ListItem,
     ListItemText,
+    Link,
+    Box,
 } from "@mui/material";
 import { myInfo, experienceTimeline, projects, skills } from "./../assets/constants"; // Import your data
 
@@ -19,22 +21,24 @@ const Resume = () => {
                     <Typography variant="h4" sx={{ fontWeight: "bold", mb: 1 }}>
                         {myInfo.name}
                     </Typography>
-                    <Typography variant="h6" color="primary">
+                    <Typography variant="h5" color="secondary">
                         {myInfo.designation}
                     </Typography>
+                    <Typography variant="body2" sx={{ mt: 1 }}>
+                        <Link color="secondary" href={`mailto:${myInfo.email}`}>{myInfo.email}</Link> | {" "}
+                        <Link color="secondary" href={myInfo.linkedInURL} target="_blank" rel="noopener noreferrer">
+                            LinkedIn
+                        </Link>{" "}
+                        | {" "}
+                        <Link color="secondary" href={myInfo.gitHubURL} target="_blank" rel="noopener noreferrer">
+                            GitHub
+                        </Link>
+                    </Typography>
+
                     <Typography variant="body1" sx={{ mt: 1 }}>
                         {myInfo.description}
                     </Typography>
-                    <Typography variant="body2" sx={{ mt: 1 }}>
-                        <a href={`mailto:${myInfo.email}`}>{myInfo.email}</a> | {" "}
-                        <a href={myInfo.linkedInURL} target="_blank" rel="noopener noreferrer">
-                            LinkedIn
-                        </a>{" "}
-                        | {" "}
-                        <a href={myInfo.gitHubURL} target="_blank" rel="noopener noreferrer">
-                            GitHub
-                        </a>
-                    </Typography>
+
                 </CardContent>
             </Card>
 
@@ -45,12 +49,14 @@ const Resume = () => {
             {experienceTimeline.map((exp, index) => (
                 <Card key={index} sx={{ mb: 2 }}>
                     <CardContent>
-                        <Typography variant="h6" color="primary">
-                            {exp.title}
-                        </Typography>
-                        <Typography variant="subtitle2" color="textSecondary">
-                            {exp.year}
-                        </Typography>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <Typography variant="h6" color="secondary">
+                                {exp.title}
+                            </Typography>
+                            <Typography variant="subtitle2" color="textSecondary">
+                                {exp.year}
+                            </Typography>
+                        </Box>
                         <Typography variant="body2" sx={{ mt: 1 }}>
                             {exp.description}
                         </Typography>
@@ -67,15 +73,15 @@ const Resume = () => {
                     <Grid item xs={12} sm={6} key={index}>
                         <Card sx={{ height: "100%" }}>
                             <CardContent>
-                                <Typography variant="h6" color="primary">
+                                <Typography variant="h6" color="secondary">
                                     {project.title}
                                 </Typography>
                                 <Typography variant="body2">{project.description}</Typography>
                                 <Typography variant="body2" sx={{ mt: 1 }}>
-                                    🔗{" "}
-                                    <a href={project.url} target="_blank" rel="noopener noreferrer">
+                                    {" "}
+                                    <Link color="secondary" href={project.url} target="_blank" rel="noopener noreferrer">
                                         View Project
-                                    </a>
+                                    </Link>
                                 </Typography>
                             </CardContent>
                         </Card>
@@ -92,7 +98,7 @@ const Resume = () => {
                     <Grid item xs={12} sm={6} key={index}>
                         <Card sx={{ height: "100%" }}>
                             <CardContent>
-                                <Typography variant="h6" color="primary">
+                                <Typography variant="h6" color="secondary">
                                     {category}
                                 </Typography>
                                 <List>

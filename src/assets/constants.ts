@@ -70,7 +70,8 @@ export const projects = [
 export const skills: Record<string, string[]> = {
     Frontend: ["HTML", "CSS", "JavaScript", "React", "Redux", "Angular", "Bootstrap", "Accessibility"],
     Backend: ["Express.js", "Socket.IO", "Postman"],
-    Database: ["MongoDB"],
     'Version Control': ["Git", "GitHub", "GitLab"],
-    OS: ["Windows", "Mac", "WSL"]
+    OS: ["Windows", "Mac", "WSL"],
+    Database: ["MongoDB"],
+
 }

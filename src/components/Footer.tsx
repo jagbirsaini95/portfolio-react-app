@@ -6,8 +6,6 @@ const Footer = () => {
     return (
         <Box
             sx={{
-                backgroundColor: '#282c34',
-                color: 'white',
                 marginTop: '20px',
                 padding: '20px 0',
                 textAlign: 'center',
@@ -18,18 +16,13 @@ const Footer = () => {
             </Typography>
             <Grid container spacing={2} justifyContent="center">
                 <Grid item>
-                    <Link href={myInfo.gitHubURL} target="_blank" rel="noopener noreferrer" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                    <Link color="secondary" href={myInfo.gitHubURL} target="_blank" rel="noopener noreferrer" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                         <GitHub />
                         GitHub
                     </Link>
                 </Grid>
                 <Grid item>
-                    <Typography variant="body2" gutterBottom>
-                        |
-                    </Typography>
-                </Grid>
-                <Grid item>
-                    <Link href={myInfo.linkedInURL} target="_blank" rel="noopener noreferrer" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                    <Link color="secondary" href={myInfo.linkedInURL} target="_blank" rel="noopener noreferrer" sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                         <LinkedIn />
                         LinkedIn
                     </Link>

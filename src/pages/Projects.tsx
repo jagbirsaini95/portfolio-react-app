@@ -5,14 +5,14 @@ import { AnimatedCard } from "../components/AminatedCard";
 const Projects = () => {
     return (
         <Container maxWidth="lg" sx={{ mt: 4 }}>
-            <Typography variant="h4" align="center" gutterBottom>
+            <Typography variant="h4" align="center">
                 My Projects
             </Typography>
-            <Typography variant="body1" align="center" color="textSecondary" gutterBottom>
+            <Typography variant="body1" align="center" gutterBottom>
                 Some of the projects I have worked on recently.
             </Typography>
 
-            <Grid container spacing={4} sx={{ mt: 3 }}>
+            <Grid container spacing={4} >
                 {projects.map((project, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
                         <AnimatedCard>

@@ -69,7 +69,7 @@ const Contact = () => {
                     <Button
                         type="submit"
                         variant="contained"
-                        color="primary"
+                        color="secondary"
                         fullWidth
                         sx={{ mt: 2 }}
                         startIcon={<Send />}

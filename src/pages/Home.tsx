@@ -1,4 +1,4 @@
-import { Container, Typography, Button, Grid, Avatar, Chip } from "@mui/material";
+import { Container, Typography, Button, Grid, Avatar, Chip, Box } from "@mui/material";
 import { GitHub, LinkedIn, Description } from "@mui/icons-material";
 import resume from '../assets/Jagbir_Singh_SDE_Resume.pdf'
 import { AnimatedCard } from "../components/AminatedCard";
@@ -14,7 +14,7 @@ const Home = () => {
                         width: 100,
                         height: 100,
                         margin: "auto",
-                        backgroundColor: "primary.main",
+                        backgroundColor: "secondary.main",
                         fontSize: "2rem",
                     }}
                 >
@@ -45,7 +45,7 @@ const Home = () => {
                     ))}
                 </Grid>
             </AnimatedCard>
-            <AnimatedCard customstyle={{ textAlign: 'center' }}>
+            <Box sx={{ textAlign: 'center' }}>
                 {/* Buttons */}
                 <Button
                     variant="contained"
@@ -77,7 +77,7 @@ const Home = () => {
                 >
                     LinkedIn
                 </Button>
-            </AnimatedCard>
+            </Box>
         </Container>
     );
 };
