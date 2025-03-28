@@ -1,6 +1,6 @@
 import { Container, Typography, Button, Grid, Avatar, Chip, Box } from "@mui/material";
 import { GitHub, LinkedIn, Description } from "@mui/icons-material";
-import resume from '../assets/JagbirSinghResumeSSE.pdf'
+import resume from '../assets/JagbirSinghSSEResume.pdf'
 import { AnimatedCard } from "../components/AminatedCard";
 import { myInfo, skills } from "../assets/constants";
 
